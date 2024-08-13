@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Anton&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: relative;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #220202;
+}
+
+header h1 {
+    color: white;
+    font-family: "Playwrite AT";
+    font-size: xx-large;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    gap: 5em;
+
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #c7b5b5;
+    font-family: "Anta";
+    font-size: large;
+}
+
+header ul li a:hover {
+    color: white;
+}
+header .btn1 i,
+header .btn i {
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+
+section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+section .content {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    max-width: 90%;
+}
+
+section .content h1 {
+    color: rgb(66, 13, 190);
+    font-family: "Playwrite AT";
+    font-size: 2rem;
+    width: 25rem;    
+
+}
+
+section .content h1 span {
+    font-weight: bolder;
+    font-size: 2.3rem;
+    color: white;
+}
+
+section .content p {
+    color: white;
+    font-family: "Anta";
+    margin-top: 0.7rem;
+    width: 40rem;
+    max-width: 100%;
+    font-size: 1rem;
+}
+
+section .content button {
+    background-color: rgb(66, 13, 190);
+    color: white;
+    font-family: "Playwrite AT";
+    padding: 0.5rem 1.5rem;
+    border-radius: 1.5rem;
+    outline: none;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+@media (max-width: 899px) {
+    header {
+        padding: 10px 20px;
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+        background-color: #220202;
+    }
+
+    header .btn i {
+        display: block;
+    }
+
+    header .btn1 i {
+        display: block;
+        position: relative;
+        left: 20rem;
+        top: -6rem;
+    }
+
+    header ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(34, 2, 2, 0.9);
+        transition: right 0.3s ease-in-out;
+        z-index: 9;
+    }
+
+    header ul.active {
+        right: 0;
+    }
+
+    header ul li {
+        margin: 1rem 0;
+        border-bottom: 0.1rem solid #c7b5b5;
+        width: 100%;
+        text-align: center;
+    }
+
+    section .content {
+        z-index: 1;
+        left: 5%;
+        transform: translateY(-45%);
+    }
+
+    section .content h1 {
+        font-size: 1.8rem;
+    }
+
+    section .content p {
+        font-size: 0.9rem;
+        width: 90%;
+    }
+}
+@media (max-width: 594px) {
+    header {
+        padding: 10px 20px;
+    }
+
+    section .content {
+        left: 10%;
+        transform: translateY(-50%);
+    }
+
+    section .content h1 {
+        font-size: 1.5rem;
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    section .content p {
+        font-size: 0.8rem;
+        width: 90%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    section .content button {
+        display: block;
+        margin: 1rem auto 0;
+    }
+}
+
+@media (max-width: 519px) {
+    section .content h1 {
+        font-size: 1.2rem;
+    }
+
+    section .content p {
+        font-size: 0.7rem;
+    }
+
+    section .content button {
+        font-size: 0.8rem;
+        padding: 0.5rem 1rem;
+    }
+}
